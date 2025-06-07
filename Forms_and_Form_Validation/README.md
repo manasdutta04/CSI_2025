@@ -48,4 +48,4 @@ src/
 
 ## Contributor
 
-- Manas Dutta (https://github.com/manasdutta04)[https://github.com/manasdutta04]
+[![Manas Dutta](https://avatars.githubusercontent.com/u/122201926?size=50)](https://github.com/manasdutta04 "Manas on GitHub") 
