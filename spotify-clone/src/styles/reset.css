@@ -1,0 +1,187 @@
+/* Reset CSS to override Tailwind styles */
+
+/* Override Tailwind's utility classes with our custom styles */
+.home-page {
+  padding: 24px !important;
+  animation: fadeIn 0.5s ease !important;
+}
+
+.home-greeting {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 24px !important;
+  background: linear-gradient(to right, #ffffff, #b3b3b3) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.section-title {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 16px !important;
+  color: #ffffff !important;
+}
+
+.content-section {
+  margin-bottom: 40px !important;
+}
+
+.cards-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)) !important;
+  gap: 24px !important;
+}
+
+.section-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 16px !important;
+}
+
+.see-all-link {
+  color: var(--spotify-gray) !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.see-all-link:hover {
+  color: var(--spotify-white) !important;
+  text-decoration: underline !important;
+}
+
+/* Force our styles to have higher specificity than Tailwind */
+.recently-played-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  gap: 16px !important;
+}
+
+.recently-played-item {
+  display: flex !important;
+  align-items: center !important;
+  background-color: rgba(40, 40, 40, 0.6) !important;
+  border-radius: 4px !important;
+  padding: 8px !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.recently-played-item:hover {
+  background-color: rgba(60, 60, 60, 0.6) !important;
+}
+
+.recently-played-cover {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 4px !important;
+  margin-right: 12px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.recently-played-info {
+  flex-grow: 1 !important;
+}
+
+.recently-played-title {
+  font-weight: 600 !important;
+  font-size: 0.875rem !important;
+  margin-bottom: 4px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.recently-played-artist {
+  font-size: 0.75rem !important;
+  color: var(--spotify-gray) !important;
+}
+
+.play-button-container {
+  opacity: 0 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.recently-played-item:hover .play-button-container {
+  opacity: 1 !important;
+}
+
+/* Featured section with larger cards */
+.featured-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
+  gap: 24px !important;
+}
+
+.featured-card {
+  position: relative !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  transition: transform 0.3s ease !important;
+  aspect-ratio: 1 !important;
+}
+
+.featured-card:hover {
+  transform: scale(1.03) !important;
+}
+
+.featured-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.featured-overlay {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  padding: 16px !important;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)) !important;
+}
+
+.featured-title {
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  margin-bottom: 4px !important;
+}
+
+.featured-description {
+  font-size: 0.75rem !important;
+  color: var(--spotify-gray) !important;
+}
+
+/* Genre cards */
+.genre-card {
+  height: 160px !important;
+  border-radius: 8px !important;
+  padding: 16px !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+
+.genre-card:hover {
+  transform: scale(1.03) !important;
+}
+
+.genre-name {
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  color: white !important;
+  z-index: 10 !important;
+}
+
+.genre-decoration {
+  position: absolute !important;
+  bottom: -20px !important;
+  right: -20px !important;
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+  transform: rotate(25deg) !important;
+} 

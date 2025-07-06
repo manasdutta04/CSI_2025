@@ -1,0 +1,194 @@
+/* HomePage.css */
+
+.home-page {
+  padding: 24px;
+  animation: fadeIn 0.5s ease;
+}
+
+.home-greeting {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  background: linear-gradient(to right, #ffffff, #b3b3b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.content-section {
+  margin-bottom: 40px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.see-all-link {
+  color: var(--spotify-gray);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.see-all-link:hover {
+  color: var(--spotify-white);
+  text-decoration: underline;
+}
+
+.recently-played {
+  margin-bottom: 32px;
+}
+
+.recently-played-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.recently-played-item {
+  display: flex;
+  align-items: center;
+  background-color: rgba(40, 40, 40, 0.6);
+  border-radius: 4px;
+  padding: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.recently-played-item:hover {
+  background-color: rgba(60, 60, 60, 0.6);
+}
+
+.recently-played-cover {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  margin-right: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.recently-played-info {
+  flex-grow: 1;
+}
+
+.recently-played-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recently-played-artist {
+  font-size: 0.75rem;
+  color: var(--spotify-gray);
+}
+
+.play-button-container {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.recently-played-item:hover .play-button-container {
+  opacity: 1;
+}
+
+/* Featured section with larger cards */
+.featured-section {
+  margin-bottom: 40px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.featured-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  aspect-ratio: 1;
+}
+
+.featured-card:hover {
+  transform: scale(1.03);
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.featured-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.featured-description {
+  font-size: 0.75rem;
+  color: var(--spotify-gray);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-greeting {
+    font-size: 1.75rem;
+  }
+  
+  .section-title {
+    font-size: 1.25rem;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+  }
+  
+  .featured-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .home-greeting {
+    font-size: 1.5rem;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+  }
+  
+  .recently-played-grid {
+    grid-template-columns: 1fr;
+  }
+} 

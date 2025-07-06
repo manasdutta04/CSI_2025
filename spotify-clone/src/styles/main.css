@@ -1,0 +1,15 @@
+/* Main CSS file that imports all page-specific styles */
+
+/* Override Tailwind's base styles with our custom styles */
+@import './reset.css';
+
+/* Import page-specific styles */
+@import './pages/HomePage.css';
+@import './pages/SearchPage.css';
+@import './pages/AlbumPage.css';
+@import './pages/PlaylistPage.css';
+@import './pages/GenrePage.css';
+@import './pages/LibraryPage.css';
+@import './pages/ProfilePage.css';
+
+/* Additional global styles can be added here */ 

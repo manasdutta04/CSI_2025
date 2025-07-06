@@ -1,0 +1,82 @@
+/* PlaylistCard styles */
+
+.playlist-card {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.playlist-card:hover {
+  transform: translateY(-5px);
+}
+
+.playlist-container {
+  background-color: var(--spotify-dark-gray);
+  padding: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.playlist-container:hover {
+  background-color: rgba(60, 60, 60, 0.8);
+}
+
+.playlist-image-container {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.playlist-cover {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.playlist-play-button {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: var(--spotify-green);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.playlist-card:hover .playlist-play-button {
+  opacity: 1;
+}
+
+.playlist-play-button:hover {
+  transform: scale(1.1);
+}
+
+.playlist-play-button:active {
+  transform: scale(0.95);
+}
+
+.playlist-title {
+  font-weight: 700;
+  color: white;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.playlist-description {
+  color: var(--spotify-gray);
+  font-size: 0.875rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} 

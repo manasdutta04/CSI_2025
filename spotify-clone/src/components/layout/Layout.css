@@ -1,0 +1,20 @@
+/* Layout styles */
+
+.layout-container {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100vh !important;
+  background-color: var(--spotify-black) !important;
+}
+
+.layout-content {
+  display: flex !important;
+  flex: 1 !important;
+  overflow: hidden !important;
+}
+
+.main-content {
+  flex: 1 !important;
+  overflow: auto !important;
+  padding: 24px !important;
+} 

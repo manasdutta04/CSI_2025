@@ -1,0 +1,483 @@
+/* ProfilePage.css */
+
+.profile-page {
+  animation: fadeIn 0.5s ease;
+}
+
+.profile-header {
+  position: relative;
+  padding: 40px 24px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  display: flex;
+  align-items: center;
+}
+
+.profile-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1e3264, #121212);
+  z-index: -1;
+}
+
+.profile-avatar-container {
+  margin-right: 32px;
+  position: relative;
+}
+
+.profile-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.edit-avatar-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--spotify-green);
+  color: var(--spotify-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.edit-avatar-button:hover {
+  transform: scale(1.1);
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-type {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+}
+
+.profile-name {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+
+.profile-stats {
+  display: flex;
+  color: var(--spotify-gray);
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+.profile-stat {
+  margin-right: 24px;
+}
+
+.profile-stat-value {
+  font-weight: 700;
+  color: var(--spotify-white);
+}
+
+.profile-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.edit-profile-button {
+  background-color: transparent;
+  color: var(--spotify-white);
+  border: 1px solid var(--spotify-gray);
+  border-radius: 32px;
+  padding: 8px 24px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-profile-button:hover {
+  border-color: var(--spotify-white);
+  transform: scale(1.02);
+}
+
+.profile-content {
+  padding: 24px;
+}
+
+.profile-tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 24px;
+}
+
+.profile-tab {
+  padding: 12px 16px;
+  font-weight: 600;
+  color: var(--spotify-gray);
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.profile-tab:hover {
+  color: var(--spotify-white);
+}
+
+.profile-tab.active {
+  color: var(--spotify-white);
+  border-bottom: 2px solid var(--spotify-green);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.content-section {
+  margin-bottom: 40px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.see-all-link {
+  color: var(--spotify-gray);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.see-all-link:hover {
+  color: var(--spotify-white);
+  text-decoration: underline;
+}
+
+/* Edit profile modal */
+.edit-profile-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: var(--spotify-dark-gray);
+  border-radius: 8px;
+  padding: 24px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.3s ease;
+}
+
+.modal-header {
+  margin-bottom: 24px;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--spotify-white);
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  color: var(--spotify-gray);
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: var(--spotify-white);
+  font-size: 1rem;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--spotify-green);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.cancel-button {
+  background: none;
+  border: none;
+  color: var(--spotify-white);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: color 0.2s ease;
+}
+
+.cancel-button:hover {
+  color: var(--spotify-green);
+}
+
+.save-button {
+  background-color: var(--spotify-green);
+  color: var(--spotify-black);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.save-button:hover {
+  transform: scale(1.05);
+  background-color: #1ed760;
+}
+
+.save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Account settings section */
+.account-settings {
+  max-width: 600px;
+}
+
+.settings-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.settings-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.settings-card-title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.settings-card-content {
+  color: var(--spotify-gray);
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+.settings-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.settings-button {
+  background-color: transparent;
+  color: var(--spotify-white);
+  border: 1px solid var(--spotify-gray);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.settings-button:hover {
+  border-color: var(--spotify-white);
+}
+
+.danger-button {
+  background-color: #e91429;
+  color: var(--spotify-white);
+  border: none;
+}
+
+.danger-button:hover {
+  background-color: #f01d32;
+}
+
+/* Activity feed */
+.activity-feed {
+  max-width: 600px;
+}
+
+.activity-item {
+  display: flex;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.activity-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.activity-user {
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.activity-time {
+  color: var(--spotify-gray);
+  font-size: 0.75rem;
+}
+
+.activity-text {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.activity-media {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.activity-media-cover {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.activity-media-info {
+  flex: 1;
+}
+
+.activity-media-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 2px;
+}
+
+.activity-media-artist {
+  color: var(--spotify-gray);
+  font-size: 0.75rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .profile-avatar-container {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+  
+  .profile-avatar {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .profile-name {
+    font-size: 2rem;
+  }
+  
+  .profile-stats {
+    justify-content: center;
+  }
+  
+  .profile-actions {
+    justify-content: center;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .profile-name {
+    font-size: 1.5rem;
+  }
+  
+  .edit-profile-button {
+    padding: 6px 16px;
+    font-size: 0.75rem;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+  }
+  
+  .modal-content {
+    padding: 16px;
+    margin: 0 16px;
+  }
+} 

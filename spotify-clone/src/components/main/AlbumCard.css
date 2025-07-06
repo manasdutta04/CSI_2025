@@ -1,0 +1,84 @@
+/* AlbumCard styles */
+
+.album-card {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.album-card:hover {
+  transform: translateY(-5px);
+}
+
+.album-container {
+  background-color: var(--spotify-dark-gray);
+  padding: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.album-container:hover {
+  background-color: rgba(60, 60, 60, 0.8);
+}
+
+.album-image-container {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.album-cover {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.album-play-button {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: var(--spotify-green);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.album-card:hover .album-play-button {
+  opacity: 1;
+}
+
+.album-play-button:hover {
+  transform: scale(1.1);
+}
+
+.album-play-button:active {
+  transform: scale(0.95);
+}
+
+.play-icon {
+  height: 16px;
+  width: 16px;
+  color: black;
+  margin-left: 2px;
+}
+
+.album-title {
+  font-weight: 700;
+  color: white;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.album-info {
+  color: var(--spotify-gray);
+  font-size: 0.875rem;
+} 

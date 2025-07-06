@@ -1,0 +1,397 @@
+/* SearchPage.css */
+
+.search-page {
+  padding: 24px;
+  animation: fadeIn 0.5s ease;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.search-header {
+  margin-bottom: 32px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 16px 0;
+  background-color: rgba(25, 20, 20, 0.9);
+  backdrop-filter: blur(10px);
+}
+
+.search-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  background: linear-gradient(to right, #ffffff, #b3b3b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.search-bar-container {
+  max-width: 720px;
+  margin-bottom: 24px;
+}
+
+.search-results-container {
+  animation: slideUp 0.4s ease-out;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.search-results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-results-count {
+  font-size: 0.875rem;
+  color: var(--spotify-gray);
+  font-style: italic;
+}
+
+.search-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  animation: fadeIn 0.3s ease;
+}
+
+.filter-button {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: rgba(40, 40, 40, 0.7);
+  color: var(--spotify-white);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filter-button:hover {
+  background-color: rgba(60, 60, 60, 0.7);
+  transform: translateY(-2px);
+}
+
+.filter-button.active {
+  background-color: var(--spotify-green);
+  color: var(--spotify-black);
+  transform: translateY(-2px);
+}
+
+.search-categories {
+  margin-bottom: 40px;
+  animation: fadeIn 0.5s ease;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.category-card:hover {
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.category-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.category-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.category-decoration {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(25deg);
+  z-index: 1;
+}
+
+/* Search results sections */
+.results-section {
+  margin-bottom: 40px;
+  animation: slideUp 0.4s ease-out;
+}
+
+.results-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.results-section-title::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 40px;
+  background: var(--spotify-green);
+  margin-left: 16px;
+  border-radius: 3px;
+}
+
+.songs-results {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: rgba(40, 40, 40, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.song-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 12px 20px;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.song-item:last-child {
+  border-bottom: none;
+}
+
+.song-item:hover {
+  background-color: rgba(60, 60, 60, 0.6);
+}
+
+.song-index {
+  width: 30px;
+  text-align: center;
+  color: var(--spotify-gray);
+  margin-right: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+.song-info {
+  display: flex;
+  align-items: center;
+}
+
+.song-cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  margin-right: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.song-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: white;
+}
+
+.song-artist {
+  font-size: 0.875rem;
+  color: var(--spotify-gray);
+}
+
+.song-duration {
+  color: var(--spotify-gray);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.artists-results, .albums-results, .playlists-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+}
+
+/* Artist card styles */
+.artist-card {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.artist-card:hover {
+  transform: translateY(-5px);
+}
+
+.artist-container {
+  background-color: rgba(40, 40, 40, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.artist-container:hover {
+  background-color: rgba(60, 60, 60, 0.8);
+}
+
+.artist-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.artist-name {
+  font-weight: 700;
+  color: white;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist-type {
+  color: var(--spotify-gray);
+  font-size: 0.875rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--spotify-gray);
+  animation: fadeIn 0.5s ease;
+}
+
+.no-results-icon {
+  font-size: 4rem;
+  margin-bottom: 24px;
+  opacity: 0.6;
+  color: var(--spotify-gray);
+}
+
+.search-icon {
+  font-size: inherit;
+}
+
+.no-results-text {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.no-results-suggestion {
+  font-size: 1rem;
+}
+
+/* Loading state */
+.search-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  animation: fadeIn 0.3s ease;
+}
+
+.search-spinner {
+  margin-bottom: 24px;
+  width: 50px;
+  height: 50px;
+  border-width: 4px;
+}
+
+.search-loading-text {
+  color: var(--spotify-gray);
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .search-title {
+    font-size: 1.75rem;
+  }
+  
+  .categories-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
+  
+  .artists-results, .albums-results, .playlists-results {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
+  
+  .category-name {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-title {
+    font-size: 1.5rem;
+  }
+  
+  .categories-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+  }
+  
+  .song-item {
+    grid-template-columns: 1fr auto;
+    padding: 10px 16px;
+  }
+  
+  .song-index {
+    display: none;
+  }
+  
+  .song-cover {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .artists-results, .albums-results, .playlists-results {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+  }
+  
+  .filter-button {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+} 
