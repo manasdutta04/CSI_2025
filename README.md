@@ -1,4 +1,4 @@
-# Celebal Summer Internship 2025
+# Celebal Technologies Summer Internship 2025
 
 Summer Intern in the React JS department from 02 Jun 2025 to 03 Aug 2025.
 
