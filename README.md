@@ -1,4 +1,4 @@
-# Celebal Summer Internship 2025
+# Celebal Technologies Summer Internship 2025
 
 Summer Intern in the React JS department from 02 Jun 2025 to 03 Aug 2025.
 
@@ -10,6 +10,7 @@ Summer Intern in the React JS department from 02 Jun 2025 to 03 Aug 2025.
 - Week 2: [To-do List](https://github.com/manasdutta04/CSI_2025/tree/main/To-do_List)
 - Week 3: [Dashboarding](https://github.com/manasdutta04/CSI_2025/tree/main/dashboarding)
 - Week 4: [Dashboard](https://github.com/manasdutta04/CSI_2025/tree/main/dashboard)
+- Week 5: [Spotify Clone](https://github.com/manasdutta04/CSI_2025/tree/main/spotify-clone)
 
 
 
