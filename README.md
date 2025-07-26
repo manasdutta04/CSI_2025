@@ -13,7 +13,7 @@ Summer Intern in the React JS department from 02 Jun 2025 to 03 Aug 2025.
 - Week 5: [Spotify Clone](https://github.com/manasdutta04/CSI_2025/tree/main/spotify-clone)
 - Week 6: [Spotify 2.0](https://github.com/manasdutta04/CSI_2025/tree/main/spotify-2.0)
 - Week 7: [E-commerce Store](https://github.com/manasdutta04/CSI_2025/tree/main/E-commerce_Store)
-
+- Week 8: [E-com Store](https://github.com/manasdutta04/CSI_2025/tree/main/E-com_store)
 
 
 
